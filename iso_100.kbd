@@ -16,7 +16,10 @@
  oemet (tap-hold 200 ; lmet)
 
  nav (layer-toggle nav)
+ num (layer-toggle num)
+ sym (layer-toggle sym)
  navesc (tap-hold 200 esc @nav)
+ numspc (tap-hold 200 spc @num)
 )
 
 (deflayer std
@@ -24,8 +27,8 @@
   _    _    _    _    _     _    _    _    _    _    _    _    _    _     _    _    _    _    _    _    _
   _    _    _    _    _     _    z    _    _    _    _    _    _    _     _    _    _    _    _    _    _
   @navesc @amet @salt @dctrl @fsft  _     _    @jsft @kctrl @lalt @oemet _    _                         _    _    _
-  _    _    y    _    _     _    _    _    _    _    _    _    _               _         _    _    _    _
-  _    _    _               _                   _    _    _    _          _    _    _    _    _
+  @sym    _    y    _    _     _    _   _    _    _    _    _    _               _         _    _    _    _
+  _    _    _               @numspc             _    _    _    _          _    _    _    _    _
 )
 
 (deflayer nav
@@ -36,6 +39,25 @@
   _    _    _    _    _    _    _    _    _    _    _    _    _               _         _    _    _    _
   _    _    _              bspc                _    _    _    _          _    _    _    _    _
 )
+
+(deflayer num
+  _    _    _    _    _    _    _    _    _    _    _    _    _          _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _     _    _    _    _    _    _    _
+  _    _    7    8    9    _    _    _    _    _    _    _    _    _     _    _    _    _    _    _    _
+  _    0    4    5    6    _    _    _    _    _    _    _    _                         _    _    _
+  _    _    _    1    2    3    _    _    _    _    _    _    _               _         _    _    _    _
+  _    _    _              _                   _    _    _    _          _    _    _    _    _
+)
+
+(deflayer sym
+  _    _    _    _    _    _    _    _    _    _    _    _    _          _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _     _    _    _    _    _    _    _
+  _    _    !    @    #    $    %    ^    &    *    _    _    _    +     _    _    _    _    _    _    _
+  _    ~    `    |    \    {    }    [    ]    :    ;    '    "                         _    _    _
+  _    _    <    >    ,    .    ?    /    _    _    _    _    _               _         _    _    _    _
+  _    _    _              _                   _    _    _    _          _    _    _    _    _
+)
+
 (defsrc
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12        ssrq slck pause
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc  ins  home pgup  nlck kp/  kp*  kp-
